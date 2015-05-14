@@ -1,7 +1,7 @@
 $visual-grid: true;
 
-@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '../bower_components/neat/app/assets/stylesheets/neat';
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../../bower_components/neat/app/assets/stylesheets/neat';
 
 
 /*============================
@@ -12,7 +12,7 @@ MIXINS
 /*============================
 FONTS & COLORS
 =============================*/
-
+ $google-blue: #156aeb;
 
 /*============================
 UNIVERSAL
@@ -31,5 +31,6 @@ BODY
 =============================*/
 
 .main-container {
-  @include outer-container(100%);
+  @include outer-container(1070px);
+  background-color: $google-blue;
 }
