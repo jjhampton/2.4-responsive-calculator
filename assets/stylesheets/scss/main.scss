@@ -1,0 +1,35 @@
+$visual-grid: true;
+
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+
+/*============================
+MIXINS
+=============================*/
+
+
+/*============================
+FONTS & COLORS
+=============================*/
+
+
+/*============================
+UNIVERSAL
+=============================*/
+
+img {
+ max-width:100%;
+ }
+
+/*============================
+CLEARFIX
+=============================*/
+
+/*============================
+BODY
+=============================*/
+
+.main-container {
+  @include outer-container(100%);
+}
