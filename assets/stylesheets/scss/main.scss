@@ -12,15 +12,27 @@ MIXINS
 /*============================
 FONTS & COLORS
 =============================*/
- $google-blue: #156aeb;
+
+$casing-color: rgb(6, 185, 185);
+$display-digit-color: rgb(9, 5, 3);
+$display-color: rgb(224, 224, 224);
+$button-operator-color: rgb(0, 150, 150);
+$button-number-color: rgb(249, 246, 246);
+$button-misc-color: rgb(255, 117, 32);
+$button-offset-color: rgba(116, 116, 116, 1);
+
+$header-font: 'Nova Square', sans-serif;
 
 /*============================
 UNIVERSAL
 =============================*/
 
-img {
- max-width:100%;
- }
+* {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
 
 /*============================
 CLEARFIX
@@ -31,6 +43,81 @@ BODY
 =============================*/
 
 .main-container {
-  @include outer-container(1070px);
-  background-color: $google-blue;
+  @include outer-container(600px);
+  background-color: $casing-color;
+  border: 1px solid black;
+}
+
+/*============================
+HEADER
+=============================*/
+
+.calculator-label {
+  background: $display-color;
+  background: linear-gradient(to right, $display-color, $casing-color, $button-misc-color);
+  line-height: 2em;
+  font-family: $header-font;
+  letter-spacing: 0.4em;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+/*============================
+DISPLAY
+=============================*/
+.display {
+  background-color: $display-color;
+  border-radius: 0.5em;
+  border: 1px solid black;
+  @include span-columns(12);
+}
+
+.display-digits {
+  border-radius: 0.5em;
+  margin: 0.5em 1em;
+  color: $display-digit-color;
+  font-size: 3em;
+  font-family: $monospace;
+  text-align: right;
+}
+
+/*============================
+BUTTONS
+=============================*/
+
+.button {
+  @include span-columns(3);
+  height: 3em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  font-family: $lucida-grande;
+  -webkit-box-shadow: inset 0 0 25px 5px rgba(0, 0, 0, .5);
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bolder;
+  text-align: center;
+  transition-property: -webkit-box-shadow, border-radius;
+  transition-timing-function: linear;
+}
+
+.button:hover {
+  border-radius: 0.9em;
+}
+
+.button-wide {
+  @include span-columns(6);
+}
+
+.button-number {
+  background-color: $button-number-color;
+}
+
+.button-misc {
+  background-color: $button-misc-color;
+}
+
+.button-operator {
+  background-color: $button-operator-color;
+  @include omega();
 }
