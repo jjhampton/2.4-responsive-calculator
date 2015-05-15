@@ -121,7 +121,6 @@ BUTTONS
   text-shadow: 1px 1px 2px #fff;
   transition-property: -webkit-box-shadow;
   transition-timing-function: linear;
-  width: 25%;
 }
 
 .button:hover {
@@ -135,7 +134,6 @@ BUTTONS
 
 .button-wide {
   @include span-columns(6);
-  width: 50%;
 }
 
 .button-number {
