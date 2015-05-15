@@ -9,6 +9,12 @@ $gutter: 0em;
 MIXINS
 =============================*/
 
+/*============================
+NEAT MEDIA QUERIES
+=============================*/
+
+$larger-screen: new-breakpoint(min-width 552px);
+
 
 /*============================
 FONTS & COLORS
@@ -62,12 +68,17 @@ HEADER
   background: linear-gradient(to right, $display-color, $casing-color, $button-misc-color);
   line-height: 2em;
   font-family: $header-font;
-  letter-spacing: 0.3em;
+  padding-left: 0.3em;
   text-align: center;
   font-size: 3em;
   font-weight: bold;
   border-bottom: 1px solid rgb(26, 23, 17);
+}
 
+.calculator-label {
+  @include media($larger-screen) {
+    letter-spacing: 0.3em;
+  }
 }
 
 /*============================
