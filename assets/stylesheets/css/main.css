@@ -7,11 +7,11 @@ html {
   box-sizing: inherit; }
 
 body:before {
-  background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
-  background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
-  background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
-  background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
-  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 6.17215%, transparent 6.17215%, transparent 8.5298%, #eee 8.5298%, #eee 14.70196%, transparent 14.70196%, transparent 17.05961%, #eee 17.05961%, #eee 23.23176%, transparent 23.23176%, transparent 25.58941%, #eee 25.58941%, #eee 31.76157%, transparent 31.76157%, transparent 34.11922%, #eee 34.11922%, #eee 40.29137%, transparent 40.29137%, transparent 42.64902%, #eee 42.64902%, #eee 48.82117%, transparent 48.82117%, transparent 51.17883%, #eee 51.17883%, #eee 57.35098%, transparent 57.35098%, transparent 59.70863%, #eee 59.70863%, #eee 65.88078%, transparent 65.88078%, transparent 68.23843%, #eee 68.23843%, #eee 74.41059%, transparent 74.41059%, transparent 76.76824%, #eee 76.76824%, #eee 82.94039%, transparent 82.94039%, transparent 85.29804%, #eee 85.29804%, #eee 91.4702%, transparent 91.4702%, transparent 93.82785%, #eee 93.82785%, #eee 100%, transparent 100%);
+  background-image: -webkit-linear-gradient(left, transparent 0, #eee 0, #eee 8.33333%, transparent 8.33333%, transparent 8.33333%, #eee 8.33333%, #eee 16.66667%, transparent 16.66667%, transparent 16.66667%, #eee 16.66667%, #eee 25%, transparent 25%, transparent 25%, #eee 25%, #eee 33.33333%, transparent 33.33333%, transparent 33.33333%, #eee 33.33333%, #eee 41.66667%, transparent 41.66667%, transparent 41.66667%, #eee 41.66667%, #eee 50%, transparent 50%, transparent 50%, #eee 50%, #eee 58.33333%, transparent 58.33333%, transparent 58.33333%, #eee 58.33333%, #eee 66.66667%, transparent 66.66667%, transparent 66.66667%, #eee 66.66667%, #eee 75%, transparent 75%, transparent 75%, #eee 75%, #eee 83.33333%, transparent 83.33333%, transparent 83.33333%, #eee 83.33333%, #eee 91.66667%, transparent 91.66667%, transparent 91.66667%, #eee 91.66667%, #eee 100%, transparent 100%);
+  background-image: -moz-linear-gradient(left, transparent 0, #eee 0, #eee 8.33333%, transparent 8.33333%, transparent 8.33333%, #eee 8.33333%, #eee 16.66667%, transparent 16.66667%, transparent 16.66667%, #eee 16.66667%, #eee 25%, transparent 25%, transparent 25%, #eee 25%, #eee 33.33333%, transparent 33.33333%, transparent 33.33333%, #eee 33.33333%, #eee 41.66667%, transparent 41.66667%, transparent 41.66667%, #eee 41.66667%, #eee 50%, transparent 50%, transparent 50%, #eee 50%, #eee 58.33333%, transparent 58.33333%, transparent 58.33333%, #eee 58.33333%, #eee 66.66667%, transparent 66.66667%, transparent 66.66667%, #eee 66.66667%, #eee 75%, transparent 75%, transparent 75%, #eee 75%, #eee 83.33333%, transparent 83.33333%, transparent 83.33333%, #eee 83.33333%, #eee 91.66667%, transparent 91.66667%, transparent 91.66667%, #eee 91.66667%, #eee 100%, transparent 100%);
+  background-image: -ms-linear-gradient(left, transparent 0, #eee 0, #eee 8.33333%, transparent 8.33333%, transparent 8.33333%, #eee 8.33333%, #eee 16.66667%, transparent 16.66667%, transparent 16.66667%, #eee 16.66667%, #eee 25%, transparent 25%, transparent 25%, #eee 25%, #eee 33.33333%, transparent 33.33333%, transparent 33.33333%, #eee 33.33333%, #eee 41.66667%, transparent 41.66667%, transparent 41.66667%, #eee 41.66667%, #eee 50%, transparent 50%, transparent 50%, #eee 50%, #eee 58.33333%, transparent 58.33333%, transparent 58.33333%, #eee 58.33333%, #eee 66.66667%, transparent 66.66667%, transparent 66.66667%, #eee 66.66667%, #eee 75%, transparent 75%, transparent 75%, #eee 75%, #eee 83.33333%, transparent 83.33333%, transparent 83.33333%, #eee 83.33333%, #eee 91.66667%, transparent 91.66667%, transparent 91.66667%, #eee 91.66667%, #eee 100%, transparent 100%);
+  background-image: -o-linear-gradient(left, transparent 0, #eee 0, #eee 8.33333%, transparent 8.33333%, transparent 8.33333%, #eee 8.33333%, #eee 16.66667%, transparent 16.66667%, transparent 16.66667%, #eee 16.66667%, #eee 25%, transparent 25%, transparent 25%, #eee 25%, #eee 33.33333%, transparent 33.33333%, transparent 33.33333%, #eee 33.33333%, #eee 41.66667%, transparent 41.66667%, transparent 41.66667%, #eee 41.66667%, #eee 50%, transparent 50%, transparent 50%, #eee 50%, #eee 58.33333%, transparent 58.33333%, transparent 58.33333%, #eee 58.33333%, #eee 66.66667%, transparent 66.66667%, transparent 66.66667%, #eee 66.66667%, #eee 75%, transparent 75%, transparent 75%, #eee 75%, #eee 83.33333%, transparent 83.33333%, transparent 83.33333%, #eee 83.33333%, #eee 91.66667%, transparent 91.66667%, transparent 91.66667%, #eee 91.66667%, #eee 100%, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0, #eee 0, #eee 8.33333%, transparent 8.33333%, transparent 8.33333%, #eee 8.33333%, #eee 16.66667%, transparent 16.66667%, transparent 16.66667%, #eee 16.66667%, #eee 25%, transparent 25%, transparent 25%, #eee 25%, #eee 33.33333%, transparent 33.33333%, transparent 33.33333%, #eee 33.33333%, #eee 41.66667%, transparent 41.66667%, transparent 41.66667%, #eee 41.66667%, #eee 50%, transparent 50%, transparent 50%, #eee 50%, #eee 58.33333%, transparent 58.33333%, transparent 58.33333%, #eee 58.33333%, #eee 66.66667%, transparent 66.66667%, transparent 66.66667%, #eee 66.66667%, #eee 75%, transparent 75%, transparent 75%, #eee 75%, #eee 83.33333%, transparent 83.33333%, transparent 83.33333%, #eee 83.33333%, #eee 91.66667%, transparent 91.66667%, transparent 91.66667%, #eee 91.66667%, #eee 100%, transparent 100%);
   content: "";
   display: inline-block;
   height: 100%;
@@ -37,7 +37,8 @@ UNIVERSAL
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 /*============================
 CLEARFIX
@@ -49,8 +50,11 @@ BODY
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   background-color: #06b9b9;
-  border: 1px solid black; }
+  border: 1px solid #1a1711;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em; }
   .main-container::after {
     clear: both;
     content: "";
@@ -67,18 +71,19 @@ HEADER
   letter-spacing: 0.3em;
   text-align: center;
   font-size: 3em;
-  font-weight: bold; }
+  font-weight: bold;
+  border-bottom: 1px solid #1a1711; }
 
 /*============================
 DISPLAY
 =============================*/
 .display {
   background-color: #e0e0e0;
-  border-radius: 0.5em;
-  border: 1px solid black; }
+  border: 1px solid #1a1711;
+  margin: 0.3em;
+  border-radius: 0.5em; }
 
 .display-digits {
-  border-radius: 0.5em;
   margin: 0.5em 1em;
   color: #090503;
   font-size: 3em;
@@ -88,36 +93,48 @@ DISPLAY
 /*============================
 BUTTONS
 =============================*/
+.input {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 100%; }
+  .input:last-child {
+    margin-right: 0; }
+
 .button {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  margin-right: 0;
+  margin-right: 0%;
+  width: 25%;
   height: 3em;
-  border: 1px solid black;
-  border-radius: 0.5em;
+  border: 1px solid #1a1711;
+  border-radius: 0.3em;
   font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
-  -webkit-box-shadow: inset 0 0 25px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 25px 5px rgba(0, 0, 0, 0.7);
   font-size: 1.5em;
   line-height: 2em;
   font-weight: bolder;
   text-align: center;
-  transition-property: -webkit-box-shadow, border-radius;
+  text-shadow: 1px 1px 2px #fff;
+  transition-property: -webkit-box-shadow;
   transition-timing-function: linear;
   width: 25%; }
   .button:last-child {
     margin-right: 0; }
 
 .button:hover {
-  border-radius: 0.9em; }
+  -webkit-box-shadow: inset 0 0 25px 5px rgba(0, 0, 0, 0.9); }
+
+.button:active {
+  /*background: white;*/
+  position: relative;
+  top: 2px; }
 
 .button-wide {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-right: 0;
+  margin-right: 0%;
+  width: 50%;
   width: 50%; }
   .button-wide:last-child {
     margin-right: 0; }
@@ -129,4 +146,6 @@ BUTTONS
   background-color: #ff7520; }
 
 .button-operator {
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
   background-color: #009696; }
