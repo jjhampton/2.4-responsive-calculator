@@ -124,8 +124,7 @@ BUTTONS
   text-align: center;
   text-shadow: 1px 1px 2px #fff;
   transition-property: -webkit-box-shadow;
-  transition-timing-function: linear;
-  width: 25%; }
+  transition-timing-function: linear; }
   .button:last-child {
     margin-right: 0; }
 
@@ -141,7 +140,6 @@ BUTTONS
   float: left;
   display: block;
   margin-right: 0%;
-  width: 50%;
   width: 50%; }
   .button-wide:last-child {
     margin-right: 0; }
