@@ -34,8 +34,10 @@ FONTS & COLORS
 /*============================
 UNIVERSAL
 =============================*/
-img {
-  max-width: 100%; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /*============================
 CLEARFIX
@@ -44,11 +46,90 @@ CLEARFIX
 BODY
 =============================*/
 .main-container {
-  max-width: 1070px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #156aeb; }
+  background-color: #06b9b9;
+  border: 1px solid black; }
   .main-container::after {
     clear: both;
     content: "";
     display: table; }
+
+/*============================
+HEADER
+=============================*/
+.calculator-label {
+  background: #e0e0e0;
+  background: linear-gradient(to right, #e0e0e0, #06b9b9, #ff7520);
+  line-height: 2em;
+  font-family: "Nova Square", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold; }
+
+/*============================
+DISPLAY
+=============================*/
+.display {
+  background-color: #e0e0e0;
+  border-radius: 0.5em;
+  border: 1px solid black;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .display:last-child {
+    margin-right: 0; }
+
+.display-digits {
+  border-radius: 0.5em;
+  margin: 0.5em 1em;
+  color: #090503;
+  font-size: 3em;
+  font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+  text-align: right; }
+
+/*============================
+BUTTONS
+=============================*/
+.button {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: 3em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+  -webkit-box-shadow: inset 0 0 25px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bolder;
+  text-align: center;
+  transition-property: -webkit-box-shadow, border-radius;
+  transition-timing-function: linear; }
+  .button:last-child {
+    margin-right: 0; }
+
+.button:hover {
+  border-radius: 0.9em; }
+
+.button-wide {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .button-wide:last-child {
+    margin-right: 0; }
+
+.button-number {
+  background-color: #f9f6f6; }
+
+.button-misc {
+  background-color: #ff7520; }
+
+.button-operator {
+  background-color: #009696;
+  margin-right: 0; }
