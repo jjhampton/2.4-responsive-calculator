@@ -64,7 +64,7 @@ HEADER
   background: linear-gradient(to right, #e0e0e0, #06b9b9, #ff7520);
   line-height: 2em;
   font-family: "Nova Square", sans-serif;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
   text-align: center;
   font-size: 3em;
   font-weight: bold; }
@@ -75,13 +75,7 @@ DISPLAY
 .display {
   background-color: #e0e0e0;
   border-radius: 0.5em;
-  border: 1px solid black;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .display:last-child {
-    margin-right: 0; }
+  border: 1px solid black; }
 
 .display-digits {
   border-radius: 0.5em;
@@ -99,6 +93,7 @@ BUTTONS
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
+  margin-right: 0;
   height: 3em;
   border: 1px solid black;
   border-radius: 0.5em;
@@ -109,7 +104,8 @@ BUTTONS
   font-weight: bolder;
   text-align: center;
   transition-property: -webkit-box-shadow, border-radius;
-  transition-timing-function: linear; }
+  transition-timing-function: linear;
+  width: 25%; }
   .button:last-child {
     margin-right: 0; }
 
@@ -120,7 +116,9 @@ BUTTONS
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%; }
+  width: 48.82117%;
+  margin-right: 0;
+  width: 50%; }
   .button-wide:last-child {
     margin-right: 0; }
 
@@ -131,5 +129,4 @@ BUTTONS
   background-color: #ff7520; }
 
 .button-operator {
-  background-color: #009696;
-  margin-right: 0; }
+  background-color: #009696; }

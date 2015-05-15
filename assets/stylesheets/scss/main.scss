@@ -57,7 +57,7 @@ HEADER
   background: linear-gradient(to right, $display-color, $casing-color, $button-misc-color);
   line-height: 2em;
   font-family: $header-font;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
   text-align: center;
   font-size: 3em;
   font-weight: bold;
@@ -70,7 +70,6 @@ DISPLAY
   background-color: $display-color;
   border-radius: 0.5em;
   border: 1px solid black;
-  @include span-columns(12);
 }
 
 .display-digits {
@@ -88,6 +87,7 @@ BUTTONS
 
 .button {
   @include span-columns(3);
+  @include omega();
   height: 3em;
   border: 1px solid black;
   border-radius: 0.5em;
@@ -99,6 +99,7 @@ BUTTONS
   text-align: center;
   transition-property: -webkit-box-shadow, border-radius;
   transition-timing-function: linear;
+  width: 25%;
 }
 
 .button:hover {
@@ -107,6 +108,9 @@ BUTTONS
 
 .button-wide {
   @include span-columns(6);
+  @include omega();
+  width: 50%; 
+
 }
 
 .button-number {
@@ -119,5 +123,4 @@ BUTTONS
 
 .button-operator {
   background-color: $button-operator-color;
-  @include omega();
 }
