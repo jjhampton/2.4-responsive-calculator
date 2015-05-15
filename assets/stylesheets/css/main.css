@@ -29,6 +29,9 @@ body:before {
 MIXINS
 =============================*/
 /*============================
+NEAT MEDIA QUERIES
+=============================*/
+/*============================
 FONTS & COLORS
 =============================*/
 /*============================
@@ -68,11 +71,15 @@ HEADER
   background: linear-gradient(to right, #e0e0e0, #06b9b9, #ff7520);
   line-height: 2em;
   font-family: "Nova Square", sans-serif;
-  letter-spacing: 0.3em;
+  padding-left: 0.3em;
   text-align: center;
   font-size: 3em;
   font-weight: bold;
   border-bottom: 1px solid #1a1711; }
+
+@media screen and (min-width: 552px) {
+  .calculator-label {
+    letter-spacing: 0.3em; } }
 
 /*============================
 DISPLAY
