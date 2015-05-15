@@ -146,10 +146,13 @@ BUTTONS
   background-color: $button-misc-color;
 }
 
-.button-special {
+.button-operator {
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+  background-color: $button-operator-color;
 }
 
-.button-operator {
+#button-equal {
   color: #fff;
   text-shadow: 1px 1px 2px black;
   background-color: $button-operator-color;
