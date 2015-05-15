@@ -1,8 +1,10 @@
 
 var init = function () {
 
-  // Loop over every element of matching CSS class and applies event listener to 'click' event on that button.  When element is clicked, function alertButtonValue is called.
+  // Variable pointing to equals-button HTML element
+  var equalsButton = document.querySelector("#button-equal");
 
+  // Loop over every element in document. Finds every element w. matching CSS class and binds event listener to 'click' event on that button.  When element is clicked, function alertButtonValue is called.
   [].forEach.call(document.querySelectorAll('.button-number'), function(element){
     element.addEventListener('click', numberPressed);
   }, false);
@@ -10,8 +12,8 @@ var init = function () {
   [].forEach.call(document.querySelectorAll('.button-operator'), function(element){
     element.addEventListener('click', numberPressed);}, false);
 
-  [].forEach.call(document.querySelector('#button-equal'), function(element){
-    element.addEventListener('click', equalPressed);}, false);
+  // Bind event listener to equals-button
+  equalsButton.addEventListener('click', equalPressed, false);
 };
 
 //Function that alerts the value of the clicked number button to the screen
