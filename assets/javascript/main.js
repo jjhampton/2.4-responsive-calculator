@@ -39,14 +39,15 @@ var init = function () {
     if (decimalPressedLast) {
       lastValueEntered = calculation[calculation.length - 1];
       calculation[calculation.length-1] = lastValueEntered + text;
-      //displayNumber.innerText +=  calculation[calculation.length-2] + calculation[calculation.length-1];    }
+      //displayNumber.innerText +=  calculation[calculation.length-2] + calculation[calculation.length-1];
+      }
     else if (numberPressedLast) {
       calculation[calculation.length - 1] += text;
-      displayNumber.innerText = calculation[calculation.length - 1];
+      //displayNumber.innerText = calculation[calculation.length - 1];
     }
     else {
       calculation.push(text);
-      displayNumber.innerText = text;
+      //displayNumber.innerText = text;
     }
 
     numberPressedLast = true;
