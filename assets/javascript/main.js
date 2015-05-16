@@ -53,6 +53,9 @@ var init = function () {
   var equalPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+
+    calculation = calculation.join('');
+    alert(eval(calculation));
     console.log(text + " CLICKED");
     console.log(calculation);
   };
