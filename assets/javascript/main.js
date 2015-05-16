@@ -6,8 +6,9 @@ var init = function () {
   //Declare local variables
     var equalsButton; //for querySelector
     var clearButton; //for querySelector
-    var displayNumber; //Number displayed on screen
-    var calculation = []; //Current calculation calculator
+    var toggleSignButton; // for querySelector
+    var displayNumber; //for querySelector
+    var calculation = []; //Current calculation
     var numberPressedLast = false;
 
 
@@ -17,7 +18,11 @@ var init = function () {
   // Variable pointing to AC-button HTML element
   clearButton = document.querySelector("#button-clear");
 
+  // Variable pointing to display-digits HTML element
   displayNumber = document.querySelector(".display-digits");
+
+  // Variable pointing to button-toggle-sign HTML element
+  toggleSignButton = document.querySelector("#button-toggle-sign");
 
   //Event handler that adds the value of the clicked number button to the calculation
   var numberPressed = function(event) {
@@ -55,7 +60,7 @@ var init = function () {
     console.log(calculation);
   };
 
-  //Event handler that alerts the value of the clicked equals button to the screen
+  //Event handler that joins the calculation array into a string, calls eval() to generate an answer, and displays the answer to the screen
   var equalPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
@@ -63,15 +68,15 @@ var init = function () {
 
     calculation = calculation.join('');
     answer = eval(calculation);
-    alert(answer);
 
     displayNumber.innerText = answer;
 
     console.log(text + " CLICKED");
     console.log(calculation);
+    console.log("answer is: " + answer);
   };
 
-  //Event handler that alerts the value of the clicked number button to the screen
+  //Event handler that resets the calculation and calculator display to zero
   var clearPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
@@ -80,6 +85,20 @@ var init = function () {
     displayNumber.innerText = "0";
     numberPressedLast = false;
     console.log(text + " CLICKED");
+    console.log(calculation);
+  };
+
+  //Event handler that toggles the sign of the last pressed number button value
+  var toggleSignPressed = function(event) {
+    var button = event.target;
+    var lastValueEntered;
+
+    lastValueEntered = calculation[calculation.length - 1];
+
+    calculation[calculation.length - 1] = ( lastValueEntered * -1);
+    displayNumber.innerText = calculation[calculation.length - 1];
+
+    console.log("Toggle sign pressed");
     console.log(calculation);
   };
 
@@ -96,6 +115,9 @@ var init = function () {
 
   // Bind event listener to AC-button
   clearButton.addEventListener('click', clearPressed, false);
+
+  // Bind event listener to toggle-sign-button
+  toggleSignButton.addEventListener('click', toggleSignPressed, false);
 };
 
 window.onload = init;
