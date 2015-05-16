@@ -39,7 +39,7 @@ var init = function () {
     if (decimalPressedLast) {
       lastValueEntered = calculation[calculation.length - 1];
       calculation[calculation.length-1] = lastValueEntered + text;
-      displayNumber.innerText = calculation[calculation.length-2] + calculation[calculation.length-1];    }
+      //displayNumber.innerText +=  calculation[calculation.length-2] + calculation[calculation.length-1];    }
     else if (numberPressedLast) {
       calculation[calculation.length - 1] += text;
       displayNumber.innerText = calculation[calculation.length - 1];
@@ -82,7 +82,7 @@ var init = function () {
     calculation = calculation.join('');
     answer = eval(calculation);
 
-    displayNumber.innerText = answer;
+    //displayNumber.innerText = answer;
 
     console.log(text + " CLICKED");
     console.log(calculation);
@@ -95,7 +95,7 @@ var init = function () {
     var text = button.textContent;
 
     calculation = [];
-    displayNumber.innerText = "0";
+    //displayNumber.innerText = "0";
     numberPressedLast = false;
     decimalPressedLast = false;
     console.log(text + " CLICKED");
@@ -110,7 +110,7 @@ var init = function () {
     lastValueEntered = calculation[calculation.length - 1];
 
     calculation[calculation.length - 1] = ( lastValueEntered * -1);
-    displayNumber.innerText = calculation[calculation.length - 1];
+    //displayNumber.innerText = calculation[calculation.length - 1];
 
     console.log("Toggle sign pressed");
     console.log(calculation);
@@ -124,8 +124,9 @@ var init = function () {
 
     if (decimalPressedLast===false) {
       lastValueEntered = calculation[calculation.length - 1];
-      calculation.push(text);
-      displayNumber.innerText = lastValueEntered + ".";
+      lastValueEntered += lastValueEntered + ".";
+      calculation += calculation.splice((calculation.length-1), lastValueEntered);
+      //displayNumber.innerText += ".";
       decimalPressedLast = true;
       numberPressedLast = false;
       console.log("Decimal pressed");
