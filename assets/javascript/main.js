@@ -34,16 +34,10 @@ var init = function () {
   var numberPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
-    var lastValueEntered;
 
-    if (decimalPressedLast) {
-      lastValueEntered = calculation[calculation.length - 1];
-      calculation[calculation.length-1] = lastValueEntered + text;
+    if (decimalPressedLast || numberPressedLast) {
+      calculation[calculation.length-1] += text;
       //displayNumber.innerText +=  calculation[calculation.length-2] + calculation[calculation.length-1];
-      }
-    else if (numberPressedLast) {
-      calculation[calculation.length - 1] += text;
-      //displayNumber.innerText = calculation[calculation.length - 1];
     }
     else {
       calculation.push(text);
@@ -51,8 +45,6 @@ var init = function () {
     }
 
     numberPressedLast = true;
-
-
     console.log(text + " CLICKED");
     console.log(calculation);
   };
@@ -70,6 +62,7 @@ var init = function () {
     }
 
     numberPressedLast = false;
+    decimalPressedLast = false;
     console.log(text + " CLICKED");
     console.log(calculation);
   };
@@ -124,9 +117,8 @@ var init = function () {
     var lastValueEntered;
 
     if (decimalPressedLast===false) {
-      lastValueEntered = calculation[calculation.length - 1];
-      lastValueEntered += lastValueEntered + ".";
-      calculation += calculation.splice((calculation.length-1), lastValueEntered);
+      calculation[calculation.length - 1] += ".";
+
       //displayNumber.innerText += ".";
       decimalPressedLast = true;
       numberPressedLast = false;
