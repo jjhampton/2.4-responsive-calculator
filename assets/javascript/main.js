@@ -21,19 +21,15 @@ var init = function () {
     var text = button.textContent;
 
     if (numberPressedLast) {
-      console.log(numberPressedLast);
       calculation[calculation.length - 1] += text;
     }
     else {
-      console.log(numberPressedLast);
       calculation.push(text);
     }
 
     numberPressedLast = true;
-    console.log(numberPressedLast);
     console.log(text + " CLICKED");
     console.log(calculation);
-    console.log(numberPressedLast);
   };
 
   //Event handler that adds the value of the clicked operator button to the calculation
@@ -51,7 +47,6 @@ var init = function () {
     numberPressedLast = false;
     console.log(text + " CLICKED");
     console.log(calculation);
-    console.log(numberPressedLast);
   };
 
   //Event handler that alerts the value of the clicked equals button to the screen
