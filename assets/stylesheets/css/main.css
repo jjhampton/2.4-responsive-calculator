@@ -125,7 +125,8 @@ BUTTONS
   .button-wide:last-child {
     margin-right: 0; }
 
-.button-number {
+.button-number,
+#button-decimal {
   background-color: #f9f6f6; }
 
 .button-misc {

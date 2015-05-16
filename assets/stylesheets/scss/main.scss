@@ -134,7 +134,8 @@ BUTTONS
   @include span-columns(6);
 }
 
-.button-number {
+.button-number,
+#button-decimal {
   background-color: $button-number-color;
 }
 
