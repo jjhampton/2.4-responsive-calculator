@@ -8,8 +8,11 @@ var init = function () {
     var clearButton; //for querySelector
     var toggleSignButton; // for querySelector
     var displayNumber; //for querySelector
+    var decimalButton; //for querySelector
     var calculation = []; //Current calculation
     var numberPressedLast = false;
+    var decimalPressedLast = false;
+
 
 
   // Variable pointing to equals-button HTML element
@@ -24,21 +27,31 @@ var init = function () {
   // Variable pointing to button-toggle-sign HTML element
   toggleSignButton = document.querySelector("#button-toggle-sign");
 
+  // Variable pointing to button-toggle-sign HTML element
+  decimalButton = document.querySelector("#button-decimal");
+
   //Event handler that adds the value of the clicked number button to the calculation
   var numberPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+    var lastValueEntered;
 
-    if (numberPressedLast) {
+    if (decimalPressedLast) {
+      lastValueEntered = calculation[calculation.length - 1];
+      calculation[calculation.length-1] = lastValueEntered + text;
+      displayNumber.innerText = calculation[calculation.length-2] + calculation[calculation.length-1];    }
+    else if (numberPressedLast) {
       calculation[calculation.length - 1] += text;
+      displayNumber.innerText = calculation[calculation.length - 1];
     }
     else {
       calculation.push(text);
+      displayNumber.innerText = text;
     }
 
     numberPressedLast = true;
 
-    displayNumber.innerText = text;
+
     console.log(text + " CLICKED");
     console.log(calculation);
   };
@@ -84,6 +97,7 @@ var init = function () {
     calculation = [];
     displayNumber.innerText = "0";
     numberPressedLast = false;
+    decimalPressedLast = false;
     console.log(text + " CLICKED");
     console.log(calculation);
   };
@@ -102,6 +116,23 @@ var init = function () {
     console.log(calculation);
   };
 
+  //Event handler that toggles the sign of the last pressed number button value
+  var decimalPressed = function(event) {
+    var button = event.target;
+    var text = button.textContent;
+    var lastValueEntered;
+
+    if (decimalPressedLast===false) {
+      lastValueEntered = calculation[calculation.length - 1];
+      calculation.push(text);
+      displayNumber.innerText = lastValueEntered + ".";
+      decimalPressedLast = true;
+      numberPressedLast = false;
+      console.log("Decimal pressed");
+      console.log(calculation);
+    }
+  };
+
   // Loop over every element in document. Finds every element w. matching CSS class and binds event listener to 'click' event on that button.  When element is clicked, function alertButtonValue is called.
   [].forEach.call(document.querySelectorAll('.button-number'), function(element){
     element.addEventListener('click', numberPressed);
@@ -110,14 +141,17 @@ var init = function () {
   [].forEach.call(document.querySelectorAll('.button-operator'), function(element){
     element.addEventListener('click', operatorPressed);}, false);
 
-  // Bind event listener to equals-button
+  // Bind event listener to equals button
   equalsButton.addEventListener('click', equalPressed, false);
 
-  // Bind event listener to AC-button
+  // Bind event listener to AC button
   clearButton.addEventListener('click', clearPressed, false);
 
-  // Bind event listener to toggle-sign-button
+  // Bind event listener to toggle-sign button
   toggleSignButton.addEventListener('click', toggleSignPressed, false);
+
+  // Bind event listener to decimal button
+  decimalButton.addEventListener('click', decimalPressed, false);
 };
 
 window.onload = init;
