@@ -1,10 +1,12 @@
+//Function to run when window is loaded in browser  Sets variables, event handlers, and contains event listener definitions.
+
 
 var init = function () {
 
   //Declare local variables
     var equalsButton; //for querySelector
     var clearButton; //for querySelector
-    var screenNumber; //Number displayed on screen
+    var displayNumber; //Number displayed on screen
     var calculation = []; //Current calculation calculator
     var numberPressedLast = false;
 
@@ -14,6 +16,8 @@ var init = function () {
 
   // Variable pointing to AC-button HTML element
   clearButton = document.querySelector("#button-clear");
+
+  displayNumber = document.querySelector(".display-digits");
 
   //Event handler that adds the value of the clicked number button to the calculation
   var numberPressed = function(event) {
@@ -28,6 +32,8 @@ var init = function () {
     }
 
     numberPressedLast = true;
+
+    displayNumber.innerText = text;
     console.log(text + " CLICKED");
     console.log(calculation);
   };
@@ -53,9 +59,14 @@ var init = function () {
   var equalPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+    var answer;
 
     calculation = calculation.join('');
-    alert(eval(calculation));
+    answer = eval(calculation);
+    alert(answer);
+
+    displayNumber.innerText = answer;
+
     console.log(text + " CLICKED");
     console.log(calculation);
   };
@@ -64,7 +75,9 @@ var init = function () {
   var clearPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+
     calculation = [];
+    displayNumber.innerText = "0";
     numberPressedLast = false;
     console.log(text + " CLICKED");
     console.log(calculation);
