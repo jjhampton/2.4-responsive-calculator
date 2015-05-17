@@ -9,10 +9,11 @@ var init = function () {
     var toggleSignButton; // for querySelector
     var displayArea; //for querySelector
     var decimalButton; //for querySelector
+    var percentButton;//for querySelector
     var calculation = []; //Current calculation
     var wasNumberPressedLast = false;
     var wasDecimalPressedLast = false;
-    var wasOperatorPressedLast;
+    var wasOperatorPressedLast; //not currently used, may need in future
 
 
 
@@ -22,6 +23,7 @@ var init = function () {
   displayArea = document.querySelector(".display-digits");
   toggleSignButton = document.querySelector("#button-toggle-sign");
   decimalButton = document.querySelector("#button-decimal");
+  percentButton = document.querySelector("#button-percent");
 
   //Event handler that adds the value of the clicked number button to the calculation
   var numberPressed = function(event) {
@@ -48,9 +50,18 @@ var init = function () {
   var operatorPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+    var previousOperator;
 
     if (wasNumberPressedLast) {
       calculation.push(text);
+      if (calculation.length >= 4) {
+        previousOperator = calculation[calculation.length-3];
+        if (getPrecedence(previousOperator) === getPrecedence(text)) {
+          console.log("precedence");
+          console.log(calculation);
+          setDisplayArea(getResult(), false);
+        }
+      }
     }
     else {
       calculation[calculation.length - 1] = text;
@@ -58,6 +69,7 @@ var init = function () {
 
     wasNumberPressedLast = false;
     wasDecimalPressedLast = false;
+
     console.log(text + " CLICKED");
     console.log(calculation);
   };
@@ -66,21 +78,21 @@ var init = function () {
   var equalPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
-    var answer;
 
-    answer = eval(calculation.join('')); //Evaluates stringified version of calculation array as if it were an expression
-    console.log(answer);
-    setDisplayArea(answer, false);
+    console.log(getResult());
+    setDisplayArea(getResult(), false);
 
     console.log(text + " CLICKED");
-    console.log("answer is: " + answer);
+    console.log("calculation is: " + calculation);
+    console.log("answer is: " + getResult());
   };
 
   //Event handler that toggles the sign of the last pressed number button value
   var toggleSignPressed = function(event) {
     var button = event.target;
+    var text = button.textContent;
     var lastValueEntered;
-
+    var lastOperatorEntered;
 
     if (wasNumberPressedLast) {
       lastValueEntered = calculation[calculation.length - 1];
@@ -88,34 +100,52 @@ var init = function () {
       if (lastOperatorEntered === "-") {
         calculation[calculation.length - 2] = "+";
         setDisplayArea(lastValueEntered * -1, false);
-        console.log("Toggle sign pressed");
-        console.log(calculation);
       }
       else {
         calculation[calculation.length - 1] = ( lastValueEntered * -1);
         //displayNumber.innerText = calculation[calculation.length - 1];
         setDisplayArea(calculation[calculation.length-1], false);
-
-        console.log("Toggle sign pressed");
-        console.log(calculation);
       }
     }
+
+    console.log(text + " CLICKED");
+    console.log(calculation);
   };
 
   //Event handler that toggles the sign of the last pressed number button value
   var decimalPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
-    var lastValueEntered;
 
     if (wasDecimalPressedLast===false) {
-      calculation[calculation.length - 1] += ".";
-      setDisplayArea(".", true);
+      calculation[calculation.length - 1] += text;
+      setDisplayArea(text, true);
       wasDecimalPressedLast = true;
       wasNumberPressedLast = false;
-      console.log("Decimal pressed");
-      console.log(calculation);
     }
+
+    console.log(text + " CLICKED");
+    console.log(calculation);
+  };
+
+  var percentPressed = function(event) {
+    var button = event.target;
+    var text = button.textContent;
+    var numberAsPercent;
+
+    if (wasNumberPressedLast) {
+      numberAsPercent = calculation[calculation.length - 1] * 0.01;
+      calculation[calculation.length - 1] = numberAsPercent;
+      setDisplayArea(calculation[calculation.length - 1], false);
+      wasNumberPressedLast = false;
+    }
+    else {
+      numberAsPercent = calculation[calculation.length - 2] * 0.01;
+      calculation[calculation.length - 2] = numberAsPercent;
+    }
+
+    console.log(text + " CLICKED");
+    console.log(calculation);
   };
 
   //Event handler that resets the calculation and calculator display to zero
@@ -124,7 +154,6 @@ var init = function () {
     var text = button.textContent;
 
     calculation = [];
-    //displayNumber.innerText = "0";
     setDisplayArea(0, false);
     wasNumberPressedLast = false;
     wasDecimalPressedLast = false;
@@ -132,13 +161,32 @@ var init = function () {
     console.log(calculation);
   };
 
-  //Function that sets value of calculator display area
+
+  //Evaluates stringified version of calculation array as if it were an expression.  Returns output of eval() function.
+  var getResult = function() {
+    var answer = eval(calculation.join(''));
+    return answer;
+  };
+
+  //Function that sets value of calculator display area.
   var setDisplayArea = function(inputValueFromButton, shouldConcat) {
     if (shouldConcat) {
       displayArea.innerText += inputValueFromButton;
     }
     else {
       displayArea.innerText = inputValueFromButton;
+    }
+  };
+
+  //Function that returns the precedence of the operator passed in as an argument and returns it as a numerical value.  May include exponents and roots w/ return value of 1 later.
+  var getPrecedence = function(operator) {
+    switch(operator) {
+      case "+":
+      case "-":
+        return 3;
+      case "*":
+      case "/":
+        return 2;
     }
   };
 
@@ -161,6 +209,9 @@ var init = function () {
 
   // Bind event listener to decimal button
   decimalButton.addEventListener('click', decimalPressed, false);
+
+  // Bind event listener to percent button
+  percentButton.addEventListener('click', percentPressed, false);
 };
 
 window.onload = init;
