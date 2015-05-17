@@ -11,7 +11,7 @@ MIXINS
 NEAT MEDIA QUERIES
 =============================*/
 
-$larger-screen: new-breakpoint(min-width 552px);
+$larger-screen: new-breakpoint(min-width 490px);
 
 
 /*============================
@@ -54,8 +54,7 @@ body {
 }
 
 .main-container {
-  @include outer-container(600px);
-  /*margin-top: 50px; */
+  @include outer-container(569px);
   background-color: $casing-color;
   border: 1px solid rgb(26, 23, 17);
   border-bottom-left-radius: 0.5em;
@@ -64,7 +63,7 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
+  }
 
 /*============================
 HEADER
@@ -73,18 +72,19 @@ HEADER
 .calculator-label {
   background: $display-color;
   background: linear-gradient(to right, $display-color, $casing-color, $button-misc-color);
-  line-height: 2em;
+  line-height: 1.5em;
+  letter-spacing: 0.6em;
   font-family: $header-font;
-  padding-left: 0.3em;
+  padding-left: 0.5em;
   text-align: center;
-  font-size: 3em;
+  font-size: 1.5em;
   font-weight: bold;
   border-bottom: 1px solid rgb(26, 23, 17);
 }
 
 .calculator-label {
   @include media($larger-screen) {
-    letter-spacing: 0.3em;
+    letter-spacing: 0.9em;
   }
 }
 

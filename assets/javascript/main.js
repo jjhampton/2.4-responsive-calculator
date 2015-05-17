@@ -47,7 +47,7 @@ var init = function () {
   //Event handler that adds the value of the clicked operator button to the calculation
   var operatorPressed = function(event) {
     var button = event.target;
-    var text = button.textContent;
+    var text = button.dataset.operator;
     var previousOperator;
     console.log(text + " CLICKED");
 

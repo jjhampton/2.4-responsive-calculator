@@ -35,10 +35,9 @@ body {
   height: 100%; }
 
 .main-container {
-  max-width: 600px;
+  max-width: 569px;
   margin-left: auto;
   margin-right: auto;
-  /*margin-top: 50px; */
   background-color: #06b9b9;
   border: 1px solid #1a1711;
   border-bottom-left-radius: 0.5em;
@@ -58,17 +57,18 @@ HEADER
 .calculator-label {
   background: #e0e0e0;
   background: linear-gradient(to right, #e0e0e0, #06b9b9, #ff7520);
-  line-height: 2em;
+  line-height: 1.5em;
+  letter-spacing: 0.6em;
   font-family: "Nova Square", sans-serif;
-  padding-left: 0.3em;
+  padding-left: 0.5em;
   text-align: center;
-  font-size: 3em;
+  font-size: 1.5em;
   font-weight: bold;
   border-bottom: 1px solid #1a1711; }
 
-@media screen and (min-width: 552px) {
+@media screen and (min-width: 490px) {
   .calculator-label {
-    letter-spacing: 0.3em; } }
+    letter-spacing: 0.9em; } }
 
 /*============================
 DISPLAY
