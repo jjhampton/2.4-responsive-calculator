@@ -27,6 +27,7 @@ var init = function () {
   var numberPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+    console.log(text + " CLICKED");
 
     if (wasDecimalPressedLast || wasNumberPressedLast) {
       calculation[calculation.length-1] += text; //Sets last value in array
@@ -40,7 +41,6 @@ var init = function () {
 
     wasNumberPressedLast = true;
 
-    console.log(text + " CLICKED");
     console.log(calculation);
   };
 
@@ -49,19 +49,22 @@ var init = function () {
     var button = event.target;
     var text = button.textContent;
     var previousOperator;
+    console.log(text + " CLICKED");
 
     if (wasNumberPressedLast) {
       calculation.push(text);
       if (calculation.length >= 4) {
         previousOperator = calculation[calculation.length-3];
         if (getPrecedence(previousOperator) === getPrecedence(text)) {
-          console.log("precedence");
+          console.log("precedence of operators matched");
           calculation.pop();
-          console.log(getResult());
-          setDisplayArea(getResult(), false);
-          console.log(calculation);
+          console.log("calculation is: " + calculation);
+          calculation = getResult();
+          console.log("display result is: " + calculation);
+          setDisplayArea(calculation, false);
+          calculation = [calculation];
           calculation.push(text);
-          console.log(calculation);
+          console.log("calculation is: " + calculation);
         }
       }
     }
@@ -72,7 +75,6 @@ var init = function () {
     wasNumberPressedLast = false;
     wasDecimalPressedLast = false;
 
-    console.log(text + " CLICKED");
     console.log(calculation);
   };
 
@@ -80,13 +82,13 @@ var init = function () {
   var equalPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
-
-    console.log(getResult());
-    setDisplayArea(getResult(), false);
-
     console.log(text + " CLICKED");
+
     console.log("calculation is: " + calculation);
-    console.log("answer is: " + getResult());
+    calculation = getResult();
+    console.log("display result is: " + calculation);
+    setDisplayArea(calculation, false);
+    calculation = [calculation];
   };
 
   //Event handler that toggles the sign of the last pressed number button value
@@ -95,6 +97,8 @@ var init = function () {
     var text = button.textContent;
     var lastValueEntered;
     var lastOperatorEntered;
+    console.log(text + " CLICKED");
+
 
     if (wasNumberPressedLast) {
       lastValueEntered = calculation[calculation.length - 1];
@@ -109,7 +113,6 @@ var init = function () {
       }
     }
 
-    console.log(text + " CLICKED");
     console.log(calculation);
   };
 
@@ -117,6 +120,7 @@ var init = function () {
   var decimalPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+    console.log(text + " CLICKED");
 
     if (wasDecimalPressedLast===false) {
       calculation[calculation.length - 1] += text;
@@ -125,7 +129,6 @@ var init = function () {
       wasNumberPressedLast = false;
     }
 
-    console.log(text + " CLICKED");
     console.log(calculation);
   };
 
@@ -133,6 +136,7 @@ var init = function () {
     var button = event.target;
     var text = button.textContent;
     var numberAsPercent;
+    console.log(text + " CLICKED");
 
     if (wasNumberPressedLast) {
       numberAsPercent = calculation[calculation.length - 1] * 0.01;
@@ -144,7 +148,6 @@ var init = function () {
       calculation[calculation.length - 2] = numberAsPercent;
     }
 
-    console.log(text + " CLICKED");
     console.log(calculation);
   };
 
@@ -152,12 +155,13 @@ var init = function () {
   var clearPressed = function(event) {
     var button = event.target;
     var text = button.textContent;
+    console.log(text + " CLICKED");
+
 
     calculation = [];
     setDisplayArea(0, false);
     wasNumberPressedLast = false;
     wasDecimalPressedLast = false;
-    console.log(text + " CLICKED");
     console.log(calculation);
   };
 
