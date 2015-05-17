@@ -58,7 +58,7 @@ HEADER
   background: #e0e0e0;
   background: linear-gradient(to right, #06b9b9, rgba(6, 185, 185, 0.25), #ff7520);
   line-height: 1.5em;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.1em;
   font-family: "Nova Square", sans-serif;
   padding-left: 0.5em;
   text-align: center;
@@ -69,6 +69,10 @@ HEADER
 @media screen and (min-width: 490px) {
   .calculator-label {
     letter-spacing: 0.9em; } }
+
+@media screen and (min-width: 375px) and (max-width: 489px) {
+  .calculator-label {
+    letter-spacing: 0.6em; } }
 
 /*============================
 DISPLAY

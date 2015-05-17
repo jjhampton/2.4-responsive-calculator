@@ -13,7 +13,7 @@ NEAT MEDIA QUERIES
 
 $large-screen: new-breakpoint(min-width 490px);
 
-$mid-screen: new-breakpoint(min-width 375px);
+$mid-screen: new-breakpoint(min-width 375px max-width 489px);
 
 
 
@@ -78,7 +78,7 @@ HEADER
   background: $display-color;
   background: linear-gradient(to right, rgb(6, 185, 185), $casing-color, $button-misc-color);
   line-height: 1.5em;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.1em;
   font-family: $header-font;
   padding-left: 0.5em;
   text-align: center;
@@ -90,6 +90,7 @@ HEADER
 .calculator-label {
   @include media($large-screen) {
     letter-spacing: 0.9em;
+  }
 }
 
 .calculator-label {
