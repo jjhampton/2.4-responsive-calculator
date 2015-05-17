@@ -15,8 +15,6 @@ var init = function () {
     var wasDecimalPressedLast = false;
     var wasOperatorPressedLast; //not currently used, may need in future
 
-
-
   // Using querySelector to assign variables to DOM elements
   equalsButton = document.querySelector("#button-equal");
   clearButton = document.querySelector("#button-clear");
@@ -58,8 +56,12 @@ var init = function () {
         previousOperator = calculation[calculation.length-3];
         if (getPrecedence(previousOperator) === getPrecedence(text)) {
           console.log("precedence");
-          console.log(calculation);
+          calculation.pop();
+          console.log(getResult());
           setDisplayArea(getResult(), false);
+          console.log(calculation);
+          calculation.push(text);
+          console.log(calculation);
         }
       }
     }
@@ -103,7 +105,6 @@ var init = function () {
       }
       else {
         calculation[calculation.length - 1] = ( lastValueEntered * -1);
-        //displayNumber.innerText = calculation[calculation.length - 1];
         setDisplayArea(calculation[calculation.length-1], false);
       }
     }
@@ -137,7 +138,6 @@ var init = function () {
       numberAsPercent = calculation[calculation.length - 1] * 0.01;
       calculation[calculation.length - 1] = numberAsPercent;
       setDisplayArea(calculation[calculation.length - 1], false);
-      wasNumberPressedLast = false;
     }
     else {
       numberAsPercent = calculation[calculation.length - 2] * 0.01;
