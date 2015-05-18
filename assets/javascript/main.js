@@ -40,6 +40,8 @@ var init = function () {
     }
 
     wasNumberPressedLast = true;
+    wasDecimalPressedLast = false;
+    wasOperatorPressedLast = false;
 
     console.log(calculation);
   };
@@ -72,8 +74,10 @@ var init = function () {
       calculation[calculation.length - 1] = text;
     }
 
+    wasOperatorPressedLast = true;
     wasNumberPressedLast = false;
     wasDecimalPressedLast = false;
+
 
     console.log(calculation);
   };
@@ -122,18 +126,28 @@ var init = function () {
     var text = button.textContent;
     console.log(text + " CLICKED");
     if (calculation.length >=1) {
-      if (wasDecimalPressedLast===false) {
-        calculation[calculation.length - 1] += (text + "0");
+      if (wasOperatorPressedLast) {
+        calculation.push("0" + text);
+        setDisplayArea(text, false);
+        wasDecimalPressedLast = true;
+        wasNumberPressedLast = false;
+        wasOperatorPressedLast = false;
+      }
+      else if (wasDecimalPressedLast===false) {
+        calculation[calculation.length - 1] += text;
         setDisplayArea(text, true);
         wasDecimalPressedLast = true;
         wasNumberPressedLast = false;
+        wasOperatorPressedLast = false;
       }
     }
     else {
-      calculation.unshift("0" + text);
+      calculation.push("0" + text);
       setDisplayArea(text, true);
       wasDecimalPressedLast = true;
       wasNumberPressedLast = false;
+      wasOperatorPressedLast = false;
+
     }
 
     console.log(calculation);
