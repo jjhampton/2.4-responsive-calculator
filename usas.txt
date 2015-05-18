@@ -20,12 +20,20 @@ When I click on AC:
   - Display is set to 0
 
 When I click on Equals:
-  - Given that 
+  - Given that equals was not pressed last
     - Queued operation is calculated
     - Display is set to calculation
   - Given that equals was pressed last
     - Concat last operator and # onto calculation and calculate it
 
-When I click on +/-:
 
 When I click on Percent:
+  - Given that number was pressed last
+    - (numberPressedLast * 0.01) displayed to screen
+    - (numberPressedLast * 0.01) value added to calculation
+  - Given that operator was pressed last
+    - (numberPressedLast) * (numberPressedLast * 0.01) displayed to screen
+    - (numberPressedLast) * (numberPressedLast * 0.01) value added to calculation
+
+When I click on +/-:
+    - numberPressedLast = numberPressedLast * -1
