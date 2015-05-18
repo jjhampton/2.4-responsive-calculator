@@ -68,7 +68,7 @@ var init = function () {
         }
       }
     }
-    else {
+    else if (calculation.length >=1){
       calculation[calculation.length - 1] = text;
     }
 
@@ -121,9 +121,16 @@ var init = function () {
     var button = event.target;
     var text = button.textContent;
     console.log(text + " CLICKED");
-
-    if (wasDecimalPressedLast===false) {
-      calculation[calculation.length - 1] += text;
+    if (calculation.length >=1) {
+      if (wasDecimalPressedLast===false) {
+        calculation[calculation.length - 1] += (text + "0");
+        setDisplayArea(text, true);
+        wasDecimalPressedLast = true;
+        wasNumberPressedLast = false;
+      }
+    }
+    else {
+      calculation.unshift("0" + text);
       setDisplayArea(text, true);
       wasDecimalPressedLast = true;
       wasNumberPressedLast = false;
