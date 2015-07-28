@@ -9,8 +9,9 @@ I built this in week 2 at The Iron Yard Academy to practice including Javascript
 - JavaScript variables to store calculated values.
 - Javascript function declarations to do basic arithmetic in JavaScript.
 - Javascript functions and event listeners to respond to user interaction.
+- SASS and Bourbon for CSS styling and layout
 - Bourbon Neat grid for responsive design at various screen sizes
-- CSS transitions and styling to make the buttons appear 3D and to "press" when clicked
+- CSS transitions to make the buttons appear 3D and to "press" when clicked
 
 ###Installation:
 * Other than a modern web browser, no additional requirements
