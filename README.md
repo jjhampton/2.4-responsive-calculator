@@ -6,9 +6,9 @@ I built this in week 2 at The Iron Yard Academy to practice including Javascript
 
 ##Tools & Techniques
 
-- JavaScript variables to store calculated values.
-- Javascript function declarations to do basic arithmetic in JavaScript.
-- Javascript functions and event listeners to respond to user interaction.
+- JavaScript variables to store calculated values
+- Javascript function declarations to do basic arithmetic in JavaScript
+- Javascript functions and event listeners to respond to user interaction
 - SASS and Bourbon for CSS styling and layout
 - Bourbon Neat grid for responsive design at various screen sizes
 - CSS transitions to make the buttons appear 3D and to "press" when clicked
