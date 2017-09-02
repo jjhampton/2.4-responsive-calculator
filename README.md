@@ -4,10 +4,10 @@ A browser-based calculator built with HTML, CSS, and JavaScript intended to repl
 
 I built this in week 2 at The Iron Yard Academy to practice including Javascript variables and functions on a live web page.
 
-##Live Demo:
+## Live Demo:
 * http://jjhampton.github.io/2.4-responsive-calculator
 
-##Tools & Techniques
+## Tools & Techniques
 
 - JavaScript variables to store calculated values
 - Javascript function declarations to do basic arithmetic in JavaScript
@@ -16,7 +16,7 @@ I built this in week 2 at The Iron Yard Academy to practice including Javascript
 - Bourbon Neat grid for responsive design at various screen sizes
 - CSS transitions to make the buttons appear 3D and to "press" when clicked
 
-##Install Dependencies:
+## Install Dependencies:
 * Modern web browser - Chrome / Firefox / Safari
 * `$ bower install bourbon`
 * `$ bower install neat`
